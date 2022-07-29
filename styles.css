@@ -12,25 +12,40 @@ html {
   margin: 0;
 }
 
+body {
+  min-width: 34rem;
+  background-color: #333;
+  color: white;
+}
+
 /* NAVBAR */
+
+#navbar {
+  height: 100vh;
+  min-width: 32rem;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 #title {
   font-size: 3rem;
   font-weight: 600;
-  background-color: yellow;
+  background: rgb(255, 215, 0);
+  background: radial-gradient(
+    circle,
+    rgba(255, 244, 75, 1) 0%,
+    rgba(255, 215, 0, 1) 100%
+  );
+  color: #333;
   text-align: center;
   padding: 2rem;
 }
 
 .link-list {
   font-size: 1.6rem;
-  width: 100%;
-  max-height: 30rem;
-  overflow-y: scroll;
   list-style: none;
-
-  border: 1px solid #333;
-  margin: 0 auto;
-
   display: flex;
   flex-direction: column;
 }
@@ -40,19 +55,22 @@ html {
   padding: 1.4rem 3rem;
 }
 
-.nav-link:not(li:last-child > .nav-link:last-child) {
-  border-bottom: 1px solid #333;
+.nav-link {
+  border-top: 1px solid white;
 }
 
 .nav-link:link,
 .nav-link:visited {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 /* MAIN DOC */
 #main-doc {
-  padding: 2.4rem 3.2rem;
+  padding: 3.2rem;
+  margin-left: 32rem;
+  background-color: white;
+  color: #333;
 }
 
 .main-section:not(.main-section:last-child) {
@@ -60,7 +78,7 @@ html {
 }
 
 .main-section header {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   font-weight: 500;
 }
 
@@ -91,7 +109,7 @@ ul {
   display: block;
   font-size: 1.3rem;
   line-height: 2;
-  background-color: #f2f2f2;
+  background-color: white;
   padding: 1.6rem 1.4rem;
   margin: 1.1rem;
 }

@@ -1,0 +1,15 @@
+@media (max-width: 800px) {
+  #navbar {
+    position: static;
+    height: auto;
+  }
+
+  .link-list {
+    overflow-y: scroll;
+    max-height: 24rem;
+  }
+
+  #main-doc {
+    margin: 0;
+  }
+}
