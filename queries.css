@@ -1,15 +1,15 @@
 @media (max-width: 800px) {
-  #navbar {
-    position: static;
+  :root {
+    font-size: 55%;
+  }
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 30rem 1fr;
+  }
+
+  .navbar {
     height: auto;
-  }
-
-  .link-list {
+    position: static;
     overflow-y: scroll;
-    max-height: 24rem;
-  }
-
-  #main-doc {
-    margin: 0;
   }
 }

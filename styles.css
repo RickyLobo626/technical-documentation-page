@@ -1,8 +1,11 @@
-html {
+:root {
   font-family: Inter, sans-serif;
   font-size: 62.5%;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  --color-1: #1e293b;
+  --color-2: #475569;
+  --color-3: #e4e4e7;
 }
 
 *,
@@ -14,107 +17,108 @@ html {
 }
 
 body {
-  min-width: 34rem;
-  background-color: #333;
-  color: white;
+  background-color: #fff;
+  color: var(--color-1);
+  min-width: 31rem;
+
+  display: grid;
+  grid-template-columns: 35rem 1fr;
 }
 
 /* NAVBAR */
+.navbar {
+  background-color: var(--color-1);
 
-#navbar {
-  height: 100vh;
-  min-width: 32rem;
-
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
+  height: 100vh;
 }
 
-#title {
-  font-size: 3rem;
-  font-weight: 600;
-  background: rgb(255, 215, 0);
+.navbar__title {
   background: radial-gradient(
     circle,
     rgba(255, 244, 75, 1) 0%,
     rgba(255, 215, 0, 1) 100%
   );
-  color: #333;
+  font-size: 2.8rem;
+  font-weight: 600;
   text-align: center;
   padding: 2rem;
 }
 
-.link-list {
+.navbar__links {
   font-size: 1.6rem;
   list-style: none;
+
   display: flex;
   flex-direction: column;
 }
 
-.nav-link {
+.navbar__link {
   display: block;
   padding: 1.4rem 3rem;
+  border-top: 1px solid var(--color-2);
 }
 
-.nav-link {
-  border-top: 1px solid white;
+.navbar__link:hover {
+  background-color: var(--color-2);
 }
 
-.nav-link:link,
-.nav-link:visited {
+.navbar__link:link,
+.navbar__link:visited {
   text-decoration: none;
-  color: white;
+  color: var(--color-3);
 }
 
 /* MAIN DOC */
-#main-doc {
+.main {
   padding: 3.2rem;
-  margin-left: 32rem;
-  background-color: white;
-  color: #333;
 }
 
-.main-section:not(.main-section:last-child) {
+.topic:not(.topic:last-child) {
   margin-bottom: 1rem;
 }
 
-.main-section header {
+.topic__header {
   font-size: 2.8rem;
   font-weight: 500;
 }
 
-.topic-article {
+.topic__article {
   padding: 2.4rem 1.4rem;
 }
 
-.topic-article p:not(p:first-child):not(code + p),
-.topic-article ul {
+.topic__article > p:not(p:first-child):not(code + p),
+.topic__article > ul {
   margin-top: 2rem;
 }
 
-.topic-article li:not(li:last-child) {
+.topic__article li:not(li:last-child) {
   margin-bottom: 1.8rem;
 }
 
-.topic-article p,
+.topic__article > p,
 ul {
   font-size: 1.6rem;
   line-height: 1.4;
 }
 
-.topic-article ul {
+.topic__article > ul {
   padding-left: 6rem;
 }
 
-.topic-article code {
+.topic__article > code {
+  background-color: var(--color-3);
   display: block;
   font-size: 1.3rem;
   line-height: 2;
-  background-color: #f2f2f2;
-  padding: 1.6rem 1.4rem;
-  margin: 1.1rem;
 
+  padding: 1.6rem 1.4rem;
+  margin: 1.4rem;
+
+  text-align: left;
   white-space: pre-line;
-  word-break: normal;
+  white-space: pre-line;
+  word-break: break-all;
   word-wrap: normal;
 }
